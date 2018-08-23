@@ -1,32 +1,61 @@
-fn main() {
-    let number = 3;
-    if number < 5 {
-        println!("condition was true");
-    } else {
-        println!("condition was false");
+/*
+pub mod a {
+    pub mod series {
+        pub mod of {
+            pub fn nested_modules() {}
+        }
     }
-
-    let number = 3;
-    if number != 0 {
-        println!("number was something other than zero");
-    }
-
-    let number = 6;
-    if number % 4 == 0 {
-        println!("number is divisible by 4");
-    } else if number % 3 == 0 {
-        println!("number is divisible by 3");
-    } else if number % 2 == 0 {
-        println!("number is divisible by 2");
-    } else {
-        println!("number is not divisible by 4, 3, or 2");
-    }
-
-    let condition = true;
-    let number = if condition {
-        5
-    } else {
-        6
-    };
-    println!("The value of number is: {}", number);
 }
+
+use a::series::of;
+
+fn main() {
+    of::nested_modules();
+}
+*/
+
+pub mod a {
+    pub mod series {
+        pub mod of {
+            pub fn nested_modules() {}
+        }
+    }
+}
+
+use a::series::of::nested_modules;
+
+fn main() {
+    nested_modules();
+}
+
+enum TrafficLight {
+    Red,
+    Yellow,
+    Green,
+}
+
+/*
+use TrafficLight::{Red, Yellow};
+
+fn main() {
+    let red = Red;
+    let yellow = Yellow;
+    let green = TrafficLight::Green;
+}
+*/
+
+/*
+enum TrafficLight {
+    Red,
+    Yellow,
+    Green,
+}
+
+use TrafficLight::*;
+
+fn main() {
+    let red = Red;
+    let yellow = Yellow;
+    let green = Green;
+}
+*/
