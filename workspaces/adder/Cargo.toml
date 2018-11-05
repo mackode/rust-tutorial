@@ -1,0 +1,8 @@
+[package]
+name = "adder"
+version = "0.1.0"
+authors = ["Bartłomiej Makowski <biuro@mackode.pl>"]
+
+[dependencies]
+
+add-one = { path = "../add-one" }
